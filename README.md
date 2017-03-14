@@ -6,8 +6,13 @@ $ brew install go
 $ go get -u github.com/golang/protobuf/{proto,protoc-gen-go}
 $ go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway
 $ go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger
+$ go get -u -v google.golang.org/grpc
 $ go get -u github.com/golang/protobuf/protoc-gen-go
 ```
+
+Change the hardcoded GOPATH in `build.sbt` to `sys.env("GOPATH")`or hardcode it if 
+you want to import the project in IntelliJ (haven't found a way for the embedded sbt
+to pick up on my .bashrc yet)
 
 Make sure that `$GOPATH/bin` is in your path. 
 
